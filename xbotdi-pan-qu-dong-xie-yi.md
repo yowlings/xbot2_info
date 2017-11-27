@@ -1,13 +1,10 @@
-# １、底盘各轮子位置及移动控制方向指示图	
+# １、底盘各轮子位置及移动控制方向指示图
 
 ![](/assets/import.png)![](/assets/double.png)**备注：**
 
 **a：计算机发给底盘的指令中，对于双轮底盘，Linear\_y\_speed方向的速度指令值无效，因为双轮不能平移。**
 
 **b:底盘反馈给计算机的指令中，对于双轮底盘，电流、码盘数只有Front\_left、Front\_right数据有效，Back\_left、Back\_right数据全0，无效。**
-
-  
-
 
 # 2协议说明
 
@@ -71,7 +68,7 @@ note1：请以大于5hz小于10hz的频率循环发送此速度控制指令，�
 
 | 命令标识符 | 命令内容 | 字节数 | 字节编号 | 数据定义 | 说明 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 0x10   | Fixed | 1 | 1 | u8 | 0x01 |
+| 0x10 | Fixed | 1 | 1 | u8 | 0x01 |
 |  | battery voltage | 2 | 2-3 | u16 | （备注1） |
 |  | Fixed | 1 | 4 | u8 | 0x03 |
 |  | Rear\_left红外测距值 | 2 | 5-6 | u16 | （备注2） |
@@ -133,14 +130,9 @@ note1：请以大于5hz小于10hz的频率循环发送此速度控制指令，�
 
 备注9：姿态角yaw/pitch/roll，各占2个字节，拼成s16类型，输出的结果yaw/pitch/roll都放大了10倍。
 
-  
-
-
 ### 2.2.3底盘上传给计算机的GPS数据
 
 该数据遵循NMEA0813标准协议：NMEA 0183是美国国家海洋电子协会（National Marine Electronics Association）为海用电子设备制定的标准格式。目前业已成了GPS导航设备统一的RTCM（Radio Technical Commission for Maritime services）标准协议。
-
-
 
 | 序号 | 命令 | 说明 | 最大帧长 |
 | :--- | :--- | :--- | :--- |
@@ -149,16 +141,16 @@ note1：请以大于5hz小于10hz的频率循环发送此速度控制指令，�
 | 3 | $GPGSV | 卫星状态信息 | 210 |
 | 4 | $GPRMC | 运输定位数据 | 70 |
 | 5 | $GPVTG | 地面速度信息 | 34 |
-| 6 | $GPGLL | 大地坐标信息 |   |
-| 7 | $GPZDA | UTC时间和日期 |   |
+| 6 | $GPGLL | 大地坐标信息 |  |
+| 7 | $GPZDA | UTC时间和日期 |  |
 
 注：发送次序$PZDA、$GPGGA、$GPGLL、$GPVTG、$GPGSA、$GPGSV\*3、$GPRMC
 
-　　协议帧总说明：
+协议帧总说明：
 
-　　该协议采用ASCII码，其串行通信默认参数为：波特率=4800bps，数据位=8bit，开始位=1bit，停止位=1bit，无奇偶校验。
+该协议采用ASCII码，其串行通信默认参数为：波特率=4800bps，数据位=8bit，开始位=1bit，停止位=1bit，无奇偶校验。
 
-　　帧格式形如：$aaccc,ddd,ddd,…,ddd\*hh&lt;CR&gt;&lt;LF&gt;
+帧格式形如：$aaccc,ddd,ddd,…,ddd\*hh&lt;CR&gt;&lt;LF&gt;
 
 1、“$”——帧命令起始位
 
@@ -252,7 +244,7 @@ $GPGSA,&lt;1&gt;,&lt;2&gt;,&lt;3&gt;,&lt;4&gt;,&lt;5&gt;,&lt;6&gt;,&lt;7&gt;,&lt
 
 GPGSV
 
-　　可视卫星状态输出语句
+可视卫星状态输出语句
 
 $GPGSV, &lt;1&gt;,&lt;2&gt;,&lt;3&gt;,&lt;4&gt;,&lt;5&gt;,&lt;6&gt;,&lt;7&gt;,...,&lt;4&gt;,&lt;5&gt;,&lt;6&gt;,&lt;7&gt;\*&lt;8&gt;&lt;CR&gt;&lt;LF&gt;
 
@@ -272,11 +264,11 @@ $GPGSV, &lt;1&gt;,&lt;2&gt;,&lt;3&gt;,&lt;4&gt;,&lt;5&gt;,&lt;6&gt;,&lt;7&gt;,..
 
 &lt;8&gt;校验和。
 
-　　注：每条语句最多包括四颗卫星的信息，每颗卫星的信息有四个数据项，即：卫星编号、卫星仰角、卫星方位角、信噪比。
+注：每条语句最多包括四颗卫星的信息，每颗卫星的信息有四个数据项，即：卫星编号、卫星仰角、卫星方位角、信噪比。
 
 GPRMC
 
-　　推荐最小数据量的GPS信息（Recommended Minimum Specific GPS/TRANSIT Data）
+推荐最小数据量的GPS信息（Recommended Minimum Specific GPS/TRANSIT Data）
 
 $GPRMC,&lt;1&gt;,&lt;2&gt;,&lt;3&gt;,&lt;4&gt;,&lt;5&gt;,&lt;6&gt;,&lt;7&gt;,&lt;8&gt;,&lt;9&gt;,&lt;10&gt;,&lt;11&gt;,&lt;12&gt;\*&lt;13&gt;&lt;CR&gt;&lt;LF&gt;
 
@@ -308,7 +300,7 @@ $GPRMC,&lt;1&gt;,&lt;2&gt;,&lt;3&gt;,&lt;4&gt;,&lt;5&gt;,&lt;6&gt;,&lt;7&gt;,&lt
 
 GPVTG
 
-　　地面速度信息
+地面速度信息
 
 $GPVTG,&lt;1&gt;,&lt;2&gt;,&lt;3&gt;,&lt;4&gt;,&lt;5&gt;,&lt;6&gt;,&lt;7&gt;,&lt;8&gt;,&lt;9&gt;\*&lt;10&gt;
 
@@ -422,9 +414,6 @@ $GPVTG,&lt;1&gt;,T,&lt;2&gt;,M,&lt;3&gt;,N,&lt;4&gt;,K,&lt;5&gt;\*hh&lt;cr&gt;&l
 
 左转向20°/s：AA 55 0D 03 00 00 00 00 00 00 00 0000 00 A0 C16F
 
-  
-
-
 gift命令：把升降平台最底部标为0，最顶部标为100，中间递增等间距标1~99位置值，升降到指定位置时只需发送对应的0~100位置值即可。
 
 最低部0位置：AA 55 03 04 010006
@@ -432,9 +421,6 @@ gift命令：把升降平台最底部标为0，最顶部标为100，中间递增
 最顶部100位置：AA 55 03 04 016462
 
 10位置：AA 55 03 04 010A0C
-
-  
-
 
 云台：云台由一个180°舵机控制，云台0°时转向底盘正左方，云台180°时转向底盘正右方，云台90°时转向底盘正前方，开机上电，云台处于90°位置。
 
@@ -452,6 +438,5 @@ gift命令：把升降平台最底部标为0，最顶部标为100，中间递增
 
 例子：AA 55 47 10 01 62 26 03 02 00 01 00 00 00 05 0A 00 06 00 00 00 00 00 06 00 03 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 E8 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 DC 2F
 
-  
-https://rocwang.gitbooks.io/xbot/content/chapter1.html
+
 
