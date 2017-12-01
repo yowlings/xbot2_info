@@ -1,26 +1,18 @@
-
-
-XBOT
-
-移动开发平台使用手册
+# XBOT移动开发平台使用手册
 
 2017.10.29 V1.0
 
-
-
-感谢您选用重德智能产品
+感谢您选用重德智能科技产品。
 
 浙江重德智能科技有限公司是源自中国科学院软件研究所和哈尔滨工业大学机器人所的创业公司，2017年9月获得国内知名的武岳峰资本1500万元天使轮投资，注册地为浙江嘉兴科技城，在北京、上海和杭州设有研发机构。公司致力于研发智能机器人相关的科研教学平台，提供稳定可靠、安全高效的机器人软硬件一体化解决方案，已经推出XBot系列通用机器人，睿思学院ROS教学平台，以及机器人在线共享租赁平台。目前已经有清华、北航、哈工大、中科院自动化所、航天科工3院、埃夫特、腾讯优图等多家重磅客户和合作伙伴。
 
+## 官方资源
 
+ROS资料中文社区：[http://wiki.ros.org/Robots/Xbot/tutorial/cn](http://wiki.ros.org/Robots/Xbot/tutorial/cn)
 
-ROS资料中文社区：http://wiki.ros.org/Robots/Xbot/tutorial/cn
+RO资料英文社区：[http://wiki.ros.org/Robots/Xbot/tutorial/](http://wiki.ros.org/Robots/Xbot/tutorial/)
 
-RO资料英文社区：http://wiki.ros.org/Robots/Xbot/tutorial/
-
-
-
-官方网站： http://www.droid.ac.cn/index.html
+官方网站： [http://www.droid.ac.cn/index.html](http://www.droid.ac.cn/index.html)
 
 技术支持：renhaibo001@aliyun.com
 
@@ -29,9 +21,6 @@ RO资料英文社区：http://wiki.ros.org/Robots/Xbot/tutorial/
 联系电话：18611376318
 
 公司地址：浙江省嘉兴市南湖区凌公塘路3339号（嘉兴科技城）1号楼297室
-
-  
-
 
 注意事项
 
@@ -58,17 +47,6 @@ RO资料英文社区：http://wiki.ros.org/Robots/Xbot/tutorial/
 5.上电工作状态下，请勿强行扭转云台；
 
 6.因个人操作原因导致的产品外观、电路、零部件损毁概不负责。
-
-
-
-  
-
-
-
-
-
-
-
 
 # 产品介绍
 
@@ -99,8 +77,6 @@ Xbot机器人配备高性能的CPU计算能力和超强的GPU计算能力，支�
 ## ROS系统全支持
 
 Xbot机器人软件框架专为ROS系统定制，可运行ROS系统下的所有软件和算法，运动控制和规划算法完全支持ROS系统协议，为更多的学习和开发者提供通用的算法验证和应用落地的平台。
-
-
 
 目前可支持 Linux、Windows 等操作系统
 
@@ -147,10 +123,10 @@ Xbot机器人软件框架专为ROS系统定制，可运行ROS系统下的所有�
 
 |  | 高配版 | 中配版 | 低配版 |
 | :--- | :--- | :--- | :--- |
-| 可靠测距范围 | ﻿0.05~25m | ﻿0.05~25m | ﻿8m |
-| 扫描频率 | ﻿15HZ | ﻿15HZ | ﻿10Hz |
-| 数据点数量 | ﻿13000/s | ﻿13000/s | ﻿4000/s |
-| ﻿FOV | ﻿270° | ﻿270° | ﻿360° |
+| 可靠测距范围 | 0.05~25m | 0.05~25m | 8m |
+| 扫描频率 | 15HZ | 15HZ | 10Hz |
+| 数据点数量 | 13000/s | 13000/s | 4000/s |
+| FOV | 270° | 270° | 360° |
 | CPU | Intel Core i7-7700 | 2x丹佛+4xA57 | 2x丹佛+4xA57 |
 | 内存 | 8GB | 8GB | 8GB |
 | 显卡 | NVIDIA GTX1060 | Pascal | Pascal |
@@ -161,27 +137,17 @@ Xbot机器人软件框架专为ROS系统定制，可运行ROS系统下的所有�
 | 红外测距范围 | 4~30cm\*3 | 4~30cm\*3 | 10~80cm\*3 |
 | 超声测距范围 | 20~600cm\*3 | 20~600cm\*3 | 20~600cm\*3 |
 
-
-
 开发套件预留接口：
 
 HDMI接口一个，供接屏幕调试用
 
 USB接口1个\(高配版两个\)，接键盘鼠标
 
+ROS资料中文社区：[http://wiki.ros.org/Robots/Xbot/tutorial/cn](http://wiki.ros.org/Robots/Xbot/tutorial/cn)
 
+RO资料英文社区：[http://wiki.ros.org/Robots/Xbot/tutorial/](http://wiki.ros.org/Robots/Xbot/tutorial/)
 
-ROS资料中文社区：http://wiki.ros.org/Robots/Xbot/tutorial/cn
-
-RO资料英文社区：http://wiki.ros.org/Robots/Xbot/tutorial/
-
-
-
-
-
-
-
-更多ROS开源配套视频代码资源可以去http://wiki.ros.org/Robots/Xbot/cn查询
+更多ROS开源配套视频代码资源可以去[http://wiki.ros.org/Robots/Xbot/cn查询](http://wiki.ros.org/Robots/Xbot/cn查询)
 
 如需更多关于IMU/深度摄像头/双目 or 深度学习 开发兴趣可随时联系我们，热烈欢迎！！！
 
@@ -189,5 +155,5 @@ RO资料英文社区：http://wiki.ros.org/Robots/Xbot/tutorial/
 
 ![](file:///C:\Users\roc-Xlab\AppData\Local\Temp\msohtmlclip1\01\clip_image006.jpg "qrcode\_for\_gh\_3ff869111f02\_430.jpg")
 
- ���仮K?x
+���仮K?x
 
