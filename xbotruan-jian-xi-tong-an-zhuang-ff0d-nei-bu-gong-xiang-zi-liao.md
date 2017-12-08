@@ -126,7 +126,54 @@ cd installROSTX2
 
 ## 六、安装xbot驱动程序以及ROS驱动包
 
-进入重德智能科技的官方github页面
+进入重德智能科技的官方github页面[https://github.com/DroidAITech](https://github.com/DroidAITech)，获取相应的官方支持驱动包。
+
+```
+cd ~/catkin_ws/src/
+git clone https://github.com/DroidAITech/xbot2
+git clone https://github.com/DroidAITech/xbot2_description
+```
+
+## 七、安装xbot ROS驱动包依赖的软件
+
+```
+sudo apt-get install ros-kinect-controller-mannager
+sudo apt-get install ros-kinect-gazebo-ros
+sudo apt-get install ros-kinect-xacro
+sudo apt-get install ros-kinect-rqt-plot
+sudo apt-get install ros-kinect-rviz
+```
+
+## 八、编译运行xbot ROS驱动包
+
+编译
+
+```
+cd catkin_ws
+catkin_make
+```
+
+运行
+
+```
+roslaunch xbot_bringup xbot.launch
+```
+
+测试是否运行成功
+
+```
+rostopic echo /mobile_base/xbot/state
+```
+
+查看机器人状态消息。
+
+
+
+
+
+
+
+
 
 
 
