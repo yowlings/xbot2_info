@@ -66,3 +66,83 @@ sudo cp -rf modules/ /lib
 
 重启即可，重启后你将看到在ls /dev之后出现了ttyUSB0这一项。
 
+## 四、对机器人端口进行映射
+
+由于机器人的驱动程序以及ROS驱动包读取的是映射之后名为/dev/xbot的串口端口，所以我们需要将插上的控制板串口编号映射到该名称下，具体做法如下：
+
+### 1、查看机器人控制板串口编号
+
+运行指令
+
+```
+lsusb
+```
+
+查看对应的串口号，此处的端口号ID为类似于0403:6001的端口号，例如下图
+
+![](/assets/port_map.png)
+
+### 2、拷贝端口映射文件
+
+将文件夹中的58-xbot.rules文件拷贝到/etc/udev/rules.d/文件夹中
+
+```
+sudo cp 58-xbot.rules /etc/udev/rules.d/
+```
+
+编辑拷贝完成的文件，然后更改内容当中的idVendor以及idProduct的编号为刚才第一步查到的编号。
+
+```
+sudo vi /etc/udev/rules.d/58-xbot.rules
+```
+
+### 3、重启端口管理服务
+
+```
+sudo service udev restart
+```
+
+或者
+
+```
+sudo /etc/init.d/udev restart
+```
+
+然后拔出串口再重新插上，如果ls /dev之后还是没有xbot这一项，如果没有则重新启动。
+
+## 五、在TX2上安装ROS
+
+具体安装过程可参照Nvidia jetson的官方github包，按照readme当中的指示完成即可。
+
+[https://github.com/jetsonhacks/installROSTX2](https://github.com/jetsonhacks/installROSTX2)
+
+```
+git clone https://github.com/jetsonhacks/installROSTX2.git
+cd installROSTX2
+./updateRepositories.sh
+./installROS.sh
+./setupCatkinWorkspace.sh
+```
+
+## 六、安装xbot驱动程序以及ROS驱动包
+
+进入重德智能科技的官方github页面
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
