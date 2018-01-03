@@ -58,7 +58,7 @@ UXbot机器人是重德智能推出的专门面向高校的科研教学机器人
 | 视觉模组                 | 3.5m，深度图像60fps@640x480，RGB图像30fps@1080p |
 | 网络                   | 百兆网络机器人路由，支持2G、3G、4G网络                  |
 
-## 四、[机器人选配表](https://github.com/yowlings/xbot2_info/UXbot-select.xlsx)
+## 四、[机器人选配表](https://github.com/yowlings/xbot2_info/blob/master/UXbot-select.xlsx?raw=true)
 
 | 组件            | 型号             | 价格    | 主要参数                                     |
 | :------------ | -------------- | ----- | ---------------------------------------- |
