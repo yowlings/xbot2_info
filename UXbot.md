@@ -69,8 +69,7 @@ UXbot机器人是重德智能推出的专门面向高校的科研教学机器人
 | 升降台(必配，可选型号）  | xbot-support   |       | 支撑平台                                     |
 |               | xbot-lift      |       | 可升降                                      |
 | 两自由度云台（必配）    | xbot-cloud     | 300   | 水平旋转180度，俯仰90度                           |
-| 视觉模组（选配，可选型号） | Realsense R200 | 1400  | 远距离（3米.4米，室外更远）景深/红外：每秒60帧时，分辨率640X480 RGB（红绿蓝）:每秒30帧时，1080P外观尺寸：130X20X7mm支持Wibdow8.1（64位）安卓支持即送将推出要求USB3.0 |
-|               | Asus Xtion2    | 2000  | 30FPS、640 x 480高景深分辨率，以及500万像素镜头，不仅可提供开发者更精确细緻的高品质深度图及彩色影像，适用范围可从0.8m延伸至3.5m |
+| 视觉模组（选配，）     | D415           | 1400  | Minimum Depth Distance: 0.2mMaximum Range: 10m+ Varies depending on performanceaccuracy, scene and light conditionsRGB Resolution: 1080p @ 30fpsProduct Dimension Length x Depth x Height:99 mm x 25mm x 25mmConnectors: USB 3.0 |
 | 主控板（必配，可选型号）  | NUC i5         | 3500  |                                          |
 |               | NUC i7         | 4200  |                                          |
 |               | GR8 i7+GTX1060 | 8700  | 高性能处理器，独立显卡                              |
