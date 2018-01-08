@@ -69,7 +69,7 @@ UXbot机器人是重德智能推出的专门面向高校的科研教学机器人
 | 升降台(必配，可选型号）  | xbot-support   |       | 支撑平台                                     |
 |               | xbot-lift      |       | 可升降                                      |
 | 两自由度云台（必配）    | xbot-cloud     | 300   | 水平旋转180度，俯仰90度                           |
-| 视觉模组（选配，）     | D415           | 1400  | Minimum Depth Distance: 0.2mMaximum Range: 10m+ Varies depending on performanceaccuracy, scene and light conditionsRGB Resolution: 1080p @ 30fpsProduct Dimension Length x Depth x Height:99 mm x 25mm x 25mmConnectors: USB 3.0 |
+| 视觉模组（选配，）     | D435           | 1480  | Minimum Depth Distance: 0.2mMaximum Range: 10m+ Varies depending on performanceaccuracy, scene and light conditionsRGB Resolution: 1080p @ 30fpsProduct Dimension Length x Depth x Height:99 mm x 25mm x 25mmConnectors: USB 3.0 |
 | 主控板（必配，可选型号）  | NUC i5         | 3500  |                                          |
 |               | NUC i7         | 4200  |                                          |
 |               | GR8 i7+GTX1060 | 8700  | 高性能处理器，独立显卡                              |
